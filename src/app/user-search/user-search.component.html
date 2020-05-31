@@ -1,56 +1,45 @@
+
 <div class="container ">
-    <h1 class="text-center">Welcome to github Search for UsersProfile</h1>
-<div class="justify-content-center row mt-5">
-    <input class=" col-6 mr-sm-2 form-control" [(ngModel)]="username" name="username" type="search" placeholder="Search" aria-label="Search">
-    <button class="col-2 btn btn-outline-success my-2 my-sm-0" type="submit" (click)="onSubmit()">Search</button>
-</div>
+  <h3 class="text-center">Search for github UsersProfile </h3>
+
+  <nav class="navbar  navbar-dark  bg-dark">
+    
+    <img src="https://relaxed-bassi-f6914f.netlify.app/GitHub-Mark-32px.png" class="rounded float-left" alt="Responsive Image">
+    <!-- <img src="C:\Users\arunkumar.sm\Desktop\Images\github1.png" width="30px" hight="30px" class="img-fluid" alt="Responsive image"> -->
+  <input class=" col-5 mr-sm-2 form-control" [(ngModel)]="username" name="username" type="search" placeholder="Search" aria-label="Search">
+  <button class="col-1 btn text-black  btn-light my-2 my-sm-0" type="submit" (click)="onSubmit()">Search</button>
+</nav>
 
 
-<!-- <div class="row" *ngIf=>
-    <div class="col-6">
-        <img [src]="userObject.avatar_url" alt="">
-    </div>
-    <div class="col-6">
-        <a [href]="userObject.html_url">{{ userObject.name }}</a>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-6">
-        <a [href]="userObject.followers_url">{{ userObject.follower }}</a>
-    </div>
-    <div class="col-6">
-        <a [href]="userObject.email">{{ userObject.email }}</a>
-    </div>
-</div>
-</div> -->
+
 <div class="container mt-5" *ngIf="hide">
+  
+<div class="row">
+  <div class="col-sm">
     
-    <div class="row">
-      <div class="col-sm">
-        
-    
-      <a class="btn btn-primary" href="{{userObject.html_url}}" role="button">{{userObject.name}}</a>
-      </div>
-      <div class="col-sm">
-        <h5>ID:{{userObject.id}}</h5>
-      </div>
-      <div class="col-sm">
-        <img src="{{userObject.avatar_url}}" class="img-fluid" alt="Responsive image" style="width: 150px;">
-      </div>
-    </div>
 
-    <div class="row mt-5">
-        <div class="col-sm">
-          
-            <h5> Number of Followers: {{userObject.followers}}</h5>
-        </div>
-        <div class="col-sm">
-          <h5>Number of Following: {{userObject.following}}</h5>
-        </div>
-        <div class="col-sm">
-            <h5>Total Number of Repository: {{userObject.public_repos}}</h5>
-        </div>
-      </div>
-    </div>  
-
+  <a class="btn btn-primary" href="{{userObject.html_url}}" role="button">{{userObject.name}}</a>
   </div>
+  <div class="col-sm">
+    <h5>ID:{{userObject.id}}</h5>
+  </div>
+  <div class="col-sm">
+    <img src="{{userObject.avatar_url}}" class="img-fluid" alt="Responsive image" style="width: 150px;">
+  </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-sm">
+      
+        <h5> Number of Followers: {{userObject.followers}}</h5>
+    </div>
+    <div class="col-sm">
+      <h5>Number of Following: {{userObject.following}}</h5>
+    </div>
+    <div class="col-sm">
+        <h5>Total Number of Repository: {{userObject.public_repos}}</h5>
+    </div>
+  </div>
+</div>  
+
+</div>

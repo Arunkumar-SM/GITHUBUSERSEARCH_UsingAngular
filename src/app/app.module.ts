@@ -11,7 +11,6 @@ import { UserSearchComponent } from './user-search/user-search.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
     UserSearchComponent
   ],
   imports: [
